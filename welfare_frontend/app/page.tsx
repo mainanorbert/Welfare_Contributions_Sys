@@ -1,17 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import HomeImage from './favicon.ico'
 export default function Home() {
   return (
     <div className="bg-white h-screen overflow-y-scroll  pt-4 relative">
       {/* Add the SVG as a background on the right side */}
       <div className="absolute inset-0">
         <svg
-          width="60%" // Adjust the width to take half of the screen or any proportion
+          width="75%" // Adjust the width to take half of the screen or any proportion
           height="100%"
           viewBox="0 0 1491 1161"
           xmlns="http://www.w3.org/2000/svg"
-          className="absolute right-0 top-4 h-full bottom-2"
+          className="absolute right-3 top- h-full"
         >
           <path
             opacity="0.5"
@@ -22,19 +21,48 @@ export default function Home() {
       </div>
 
       {/* Content */}
-      <div className="text-center z-10 right-[15rem] absolute text-black"
+      <div  className="absolute z-10 text-black top-[10rem] bg-gree-300 w-4/12 left-[4rem]">
+        <p className="text-3xl font-bold ">Fostering Efficiency and Transparency</p>
+        <p>To make the image visible without adding content inside the div,
+          you need to give the div some dimensions (width and height).
+          Since an empty div doesn't have any intrinsic dimensions,
+          setting the size will ensure the background image is displayed.
+          To make the image visible without adding content inside the div,
+          you need to give the div some dimensions (width and height).
+          Since an empty div doesn't have any intrinsic dimensions,
+          setting the size will ensure the background image is displayed.
+           </p>
+           <div className="flex justify-around mt-6">
+            <p className="bg-blue-950 rounded text-white py-2 px-10">Fundraise</p>
+            <p className="border-2 border-blue-950 px-10 py-2 rounded">Learn More</p>
+           </div>
+      </div>
+      <div className="text-center z-10 right-[4rem] rounded-3xl top-[9rem] absolute text-black"
       style={{
-        backgroundImage: `url('/Image.jpg')`,
-        backgroundSize: '100', 
+        backgroundImage: `url('/Display.jpg')`,
+        backgroundSize: 'cover', 
         backgroundRepeat: 'no-repeat',        
-        backgroundPosition: 'center', 
+        backgroundPosition: 'center',
+        width: '700px',
+        height: '450px',
        }}
-      >This is homepage</div>
-      <div className="relative z-10 flex justify-end pt-4 pr-4 space-x-4">
-        <Link className="pr-4 bg-blue-400 rounded p-1 px-3" href="/login">
+      >
+      
+      </div>
+        {/* <Image
+        src="/Display.jpg"
+        alt="Descriptive text for screen readers"
+        className="absolute"
+        width={100}
+        height={100}
+        layout="responsive"
+      /> */}
+      
+      <div className="relative z-10 flex justify-end pt-4 pr-[9rem] space-x-4">
+        <Link className="pr-4 bg-blue-950 rounded py-2 px-6" href="/login">
           Login
         </Link>
-        <Link className="pr-4 bg-blue-400 rounded p-1 px-3" href="/register">
+        <Link className="pr-4 bg-blue-950 rounded py-2 px-6" href="/register">
           Register
         </Link>
       </div>
