@@ -21,7 +21,7 @@ export default function Home() {
       </div>
 
       {/* Content */}
-      <div  className="absolute z-10 text-black top-[10rem] bg-gree-300 w-4/12 left-[4rem]">
+      <div  className="text-blue-950 absolute z-10 text-black top-[10rem] bg-gree-300 w-4/12 left-[4rem]">
         <p className="text-3xl font-bold ">Fostering Efficiency and Transparency</p>
         <p>To make the image visible without adding content inside the div,
           you need to give the div some dimensions (width and height).
