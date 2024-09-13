@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 const Sidebar = () => {
   return (
-    <div className='bg-black h-screen'>
+    <div className='bg-black'>
     <div className='mr-8'>
     <div
           className=' h-10 gap-2 ml-4 py-2 mt-4'
@@ -18,7 +18,7 @@ const Sidebar = () => {
             <Link href="/dashboard/contributions">Contributions</Link>
           </div>
           <div className='mt-4 text-gray-500 hover:text-white'>
-            <Link href="#">Membership</Link>
+            <Link href="/dashboard/members">Membership</Link>
           </div>
           <div className='mt-4 text-gray-500 hover:text-white'>
             <Link href="#">History</Link>

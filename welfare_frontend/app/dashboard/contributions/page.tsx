@@ -1,35 +1,3 @@
-// import React from 'react'
-
-// const Contributions = () => {
-//   return (
-//     <div>
-//      <div> Running Contributions</div>
-//      <div className='grid grid-cols-3 p-4'>
-//         <div className='bg-green-400'>
-//             <div >School Fees</div>
-//             <p>To make the image visible without adding content inside the div,
-//                 you need to give the div some dimensions (width and height).
-//                 Since an empty div doesn't have any
-//                 intrinsic dimensions, setting the size will ensure the background </p>
-//         </div>
-//         <div>
-//             <div>School Fees</div>
-//             <p>To make the image visible without adding content inside the div,
-//                 you need to give the div some dimensions (width and height).
-//                 Since an empty div doesn't have any
-//                 intrinsic dimensions, setting the size will ensure the background </p>
-//         </div>
-       
-
-//      </div>
-//     </div>
-//   )
-// }
-
-// export default Contributions
-
-
-
 
 'use client'
 
@@ -37,15 +5,16 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
 import { CalendarIcon, UsersIcon, ClockIcon } from "lucide-react"
+import { CreateContribution } from "@/components/forms/Contributions"
 
 const fundraisers = [
   {
     name: "School Fees",
-    amountRaised: 7500,
+    amountRaised: 7000,
     goalAmount: 10000,
     donors: 125,
     daysLeft: 15,
-    organizer: "John Doe",
+    organizer: "This fundraiser is meant for the sone Of David in plan to join University",
     startDate: "May 1, 2023"
   },
   {
@@ -56,6 +25,51 @@ const fundraisers = [
     daysLeft: 15,
     organizer: "John Doe",
     startDate: "May 1, 2023"
+  },
+  {
+    name: "Medical Aid",
+    amountRaised: 5000,
+    goalAmount: 12000,
+    donors: 85,
+    daysLeft: 10,
+    organizer: "Jane Smith",
+    startDate: "April 20, 2023"
+  },
+  {
+    name: "Medical Aid",
+    amountRaised: 5000,
+    goalAmount: 12000,
+    donors: 85,
+    daysLeft: 10,
+    organizer: "Jane Smith",
+    startDate: "April 20, 2023"
+  },
+  {
+    name: "Medical Aid",
+    amountRaised: 5000,
+    goalAmount: 12000,
+    donors: 85,
+    daysLeft: 10,
+    organizer: "Jane Smith",
+    startDate: "April 20, 2023"
+  },
+  {
+    name: "Medical Aid",
+    amountRaised: 5000,
+    goalAmount: 12000,
+    donors: 85,
+    daysLeft: 10,
+    organizer: "Jane Smith",
+    startDate: "April 20, 2023"
+  },
+  {
+    name: "Medical Aid",
+    amountRaised: 5000,
+    goalAmount: 12000,
+    donors: 85,
+    daysLeft: 10,
+    organizer: "Jane Smith",
+    startDate: "April 20, 2023"
   },
   {
     name: "Medical Aid",
@@ -82,16 +96,23 @@ export default function FundraiserPage() {
   const totalPages = Math.ceil(fundraisers.length / CARDS_PER_PAGE);
 
   return (
-    <div className="relative max-w-7xl mx-auto px-4">
+    <div className="relative h-screen ">
+    <div className=" max-w-7xl mb-4 mx-auto px-4">
+      <div className="flex justify-between mt-4 pr-[5rem]">
+      <div className="text-2xl">Running Contributions</div>
+      <div><CreateContribution/></div>
+      </div>
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-2">
         {currentCards.map((fundraiser, index) => (
           <FundraiserCard key={index} fundraiser={fundraiser} />
         ))}
       </div>
 
+    
+    </div>
       {/* Pagination Controls */}
-      <div className="flex justify-end mt-8 mb-5 space-x-4">
+      <div className="flex justify-end absolute right-5 bottom-0 space-x-4">
         <Button
           disabled={currentPage === 1}
           onClick={() => setCurrentPage(currentPage - 1)}
@@ -129,7 +150,7 @@ function FundraiserCard({ fundraiser }) {
       )}
 
       <div
-        className={`rounded-lg overflow-hidden shadow-lg bg-gradient-to-br from-blue-400 via-pink-500 to-red-500 relative transition-transform duration-300 ${
+        className={`rounded-lg overflow-hidden shadow-lg bg-gradient-to-br from-blue-400 via-amber-700 to-red-700 relative transition-transform duration-300 ${
           isHovered ? "transform scale-95" : ""
         }`}
         style={{ maxWidth: '280px' }} 
