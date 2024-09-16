@@ -96,7 +96,7 @@ export default function FundraiserPage() {
   const totalPages = Math.ceil(fundraisers.length / CARDS_PER_PAGE);
 
   return (
-    <div className="relative h-screen ">
+    <div className="relative">
     <div className=" max-w-7xl mb-4 mx-auto px-4">
       <div className="flex justify-between mt-4 pr-[5rem]">
       <div className="text-2xl">Running Contributions</div>
@@ -112,7 +112,7 @@ export default function FundraiserPage() {
     
     </div>
       {/* Pagination Controls */}
-      <div className="flex justify-end absolute right-5 bottom-0 space-x-4">
+      <div className="flex justify-end absolute right-5 top-[38rem] mb-10 space-x-4">
         <Button
           disabled={currentPage === 1}
           onClick={() => setCurrentPage(currentPage - 1)}

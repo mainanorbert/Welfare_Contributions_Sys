@@ -37,7 +37,7 @@ export default function Home() {
             <p className="border-2 border-blue-950 px-10 py-2 rounded">Learn More</p>
            </div>
       </div>
-      <div className="text-center z-10 right-[4rem] rounded-3xl top-[9rem] absolute text-black"
+      <div className="text-center z-10 md:right-[4rem] rounded-3xl top-[9rem] absolute text-black"
       style={{
         backgroundImage: `url('/Display.jpg')`,
         backgroundSize: 'cover', 
@@ -49,15 +49,7 @@ export default function Home() {
       >
       
       </div>
-        {/* <Image
-        src="/Display.jpg"
-        alt="Descriptive text for screen readers"
-        className="absolute"
-        width={100}
-        height={100}
-        layout="responsive"
-      /> */}
-      
+          
       <div className="relative z-10 flex justify-end pt-4 pr-[9rem] space-x-4">
         <Link className="pr-4 bg-blue-950 rounded py-2 px-6" href="/login">
           Login

@@ -16,7 +16,7 @@ export function CreateContribution() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline" className="bg-amber-100 text- hover:bg-amber-200 ">Add Contribution</Button>
+        <Button variant="outline" className="bg-amber-100 text- hover:bg-amber-200 ">Create Contribution</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px] bg-white text-black">
         <DialogHeader>

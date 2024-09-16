@@ -1,6 +1,11 @@
+'use client'
 import React from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { navlist } from '../../components/constants/constants'
 const Sidebar = () => {
+  const path = usePathname()
+
   return (
     <div className='bg-black'>
     <div className='mr-8'>
@@ -14,20 +19,14 @@ const Sidebar = () => {
             <p className="text-[16px] font-bold">Norbert</p>
             <p className="text-[12px] text-neutral-500">mainanorbert@gmail.com</p>
           </div>
-          <div className='mt-8 text-gray-500 hover:text-white'>
-            <Link href="/dashboard/contributions">Contributions</Link>
-          </div>
-          <div className='mt-4 text-gray-500 hover:text-white'>
-            <Link href="/dashboard/members">Membership</Link>
-          </div>
-          <div className='mt-4 text-gray-500 hover:text-white'>
-            <Link href="#">History</Link>
-          </div>
-          <div className='mt-4 text-gray-500 hover:text-white'>
-            <Link href="#">Accounting</Link>
-          </div>
 
-          <div className='mt-[18rem] text-gray-500 hover:text-white'>
+          {navlist.map((item)=>(
+            <div className={`mt-8 text-gray-500 hover:text-white ${path === item.ref? 'text-white':''}`}>
+            <Link href={item.ref}>{item.name}</Link>
+          </div>
+          ))}
+
+          <div className='mt-[14rem] text-gray-500 hover:text-white'>
             <Link href="#">Logout</Link>
           </div>
 
