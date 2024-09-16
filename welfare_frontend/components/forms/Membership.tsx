@@ -12,23 +12,23 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 
-export function CreateContribution() {
+export function AddMember() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline" className="bg-blue-900 text-white hover:text-white hover:bg-blue-950">Create Contribution</Button>
+        <Button variant="outline" className="bg-blue-900 text-white hover:text-white hover:bg-blue-950">Add Member</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px] bg-white text-black">
         <DialogHeader>
-          <DialogTitle>Add Contribution</DialogTitle>
+          <DialogTitle>Add Member</DialogTitle>
           <DialogDescription>
-           Once you create a contribution, it will be appear as a card in this page
+           Once you add a member, member details will be appear in the table of page
           </DialogDescription>
         </DialogHeader>
         <div className="">
           <div className=" gap-4">
             <Label htmlFor="name" className="text-right mb-1 font-bold">
-              Type
+              First Name
             </Label>           
             <Input
               id="name"
@@ -38,7 +38,17 @@ export function CreateContribution() {
           </div>
           <div className=" gap-4">
             <Label htmlFor="name" className="text-right mb-1 font-bold">
-              Target Amount
+              Last Name
+            </Label>           
+            <Input
+              id="name"
+              
+              className="mt-1"
+            />
+          </div>
+          <div className=" gap-4">
+            <Label htmlFor="name" className="text-right mb-1 font-bold">
+            Member No.
             </Label>           
             <Input
               id="name"
@@ -49,26 +59,16 @@ export function CreateContribution() {
           </div>
           <div className=" gap-4">
             <Label htmlFor="name" className="text-right mb-1 font-bold">
-              Deadline
+              Status
             </Label>           
             <Input
               id="name"
-              type="Date"
+              type="text"
               className="mt-1"
 
             />
           </div>
-          <div className=" gap-4">
-            <Label htmlFor="name" className="text-right mb-1 font-bold">
-              Description
-            </Label>   
-            <br />     
-            <Textarea 
-            maxLength={100}
-            />   
-            
-
-          </div>
+       
           
         </div>
         <DialogFooter>
