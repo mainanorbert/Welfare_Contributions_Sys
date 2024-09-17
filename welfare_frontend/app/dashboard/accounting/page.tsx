@@ -10,7 +10,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 
-// Sample data for the table
+// Sample data for the table 
 const fundraisingData = [
   { type: "School Fees", amountRaised: "$5000", description: "Fundraising for underprivileged students' education" },
   { type: "Sickness", amountRaised: "$7500", description: "Medical expenses for community members" },
