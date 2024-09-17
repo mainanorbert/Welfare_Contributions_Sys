@@ -34,7 +34,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             </div>
           ))}
 
-          <div className='mt-[14rem] text-gray-500 hover:text-white'>
+          <div className='mt-[12rem] text-gray-500 hover:text-white'>
             <Link href="#">Logout</Link>
           </div>
         </div>

@@ -31,17 +31,22 @@ const members = [
 
 export default function MemberList() {
   const [searchTerm, setSearchTerm] = useState('')
+  const [statusFilter, setStatusFilter] = useState('All')  // New state for filtering by status
   const [currentPage, setCurrentPage] = useState(1)
   const [filteredMembers, setFilteredMembers] = useState(members)
   const membersPerPage = 5
 
+  // Update filtering logic
   useEffect(() => {
-    const results = members.filter(member =>
+    let results = members.filter(member =>
       member.firstName.toLowerCase().includes(searchTerm.toLowerCase())
     )
+    if (statusFilter !== 'All') {
+      results = results.filter(member => member.status === statusFilter)
+    }
     setFilteredMembers(results)
     setCurrentPage(1)
-  }, [searchTerm])
+  }, [searchTerm, statusFilter])
 
   const handleView = (memberNo: string) => {
     console.log(`Viewing member ${memberNo}`)
@@ -70,13 +75,22 @@ export default function MemberList() {
         <div className="text-2xl font-bold">Member List</div>
         <div><AddMember /></div>
       </div>
-      <div className="mb-4">
+      <div className="mb-4 flex space-x-4">
         <Input
           type="text"
           placeholder="Search by first name..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
+        <select
+          value={statusFilter}
+          onChange={(e) => setStatusFilter(e.target.value)}
+          className="border border-gray-300 rounded px-3 py-2"
+        >
+          <option value="All">All</option>
+          <option value="Active">Active</option>
+          <option value="Inactive">Inactive</option>
+        </select>
       </div>
       <Table>
         <TableCaption>A list of all members</TableCaption>

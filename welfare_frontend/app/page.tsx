@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 export default function Home() {
   return (
-    <div className="bg-white h-screen overflow-y-scroll  pt-4 relative">
+    <div className="bg-white h-screen overflow-y-scroll  pt-4 md:relative">
       {/* Add the SVG as a background on the right side */}
-      <div className="absolute inset-0">
+      <div className="absolute md:inset-0">
         <svg
           width="75%" // Adjust the width to take half of the screen or any proportion
           height="100%"

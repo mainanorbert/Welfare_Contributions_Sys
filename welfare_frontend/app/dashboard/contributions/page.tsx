@@ -99,7 +99,7 @@ export default function FundraiserPage() {
     <div className="relative">
     <div className=" max-w-7xl mb-4 mx-auto px-4">
       <div className="flex justify-between mt-4 pr-[5rem]">
-      <div className="text-2xl">Running Contributions</div>
+      <div className="text-2xl font-bold">Running Contributions</div>
       <div><CreateContribution/></div>
       </div>
       {/* Cards Grid */}
