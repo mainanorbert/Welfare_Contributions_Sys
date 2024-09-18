@@ -70,7 +70,7 @@ export default function MemberList() {
   const totalPages = Math.ceil(filteredMembers.length / membersPerPage)
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container max-w-4xl mx-auto px-4 py-8">
       <div className='flex justify-between items-center mb-4'>
         <div className="text-2xl font-bold">Member List</div>
         <div><AddMember /></div>

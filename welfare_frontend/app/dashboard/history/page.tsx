@@ -12,7 +12,7 @@ const contributions = [
 
 export default function ContributionTable() {
   return (
-    <div className="w-full  mx-auto p-4">
+    <div className="w-full max-w-4xl mx-auto p-4">
       <div className="flex justify-between mb-4">
         <div className="text-2xl font-bold ">Contribution History</div>
         <Button variant="outline" className="bg-blue-950 text-white hover:bg-blue-900 hover:text-white">

@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from 'react'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Button } from "@/components/ui/button"
@@ -40,6 +41,7 @@ export default function FundraisingTable() {
 
   return (
     <div className="w-full max-w-4xl mx-auto p-4">
+      <div className='text-2xl font-bold mb-3'>Accounting Section</div>
       <div className="flex justify-between items-center mb-4">
         <Select value={filter} onValueChange={setFilter}>
           <SelectTrigger className="w-[180px]">
@@ -52,7 +54,7 @@ export default function FundraisingTable() {
             <SelectItem value="Death">Death</SelectItem>
           </SelectContent>
         </Select>
-        <Button variant="outline">
+        <Button variant="outline" className='bg-blue-950 text-white hover:bg-blue-900 hover:text-white'>
           <Download className="mr-2 h-4 w-4" /> Download All
         </Button>
       </div>

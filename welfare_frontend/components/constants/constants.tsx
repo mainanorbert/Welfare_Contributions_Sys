@@ -16,7 +16,7 @@ export const navlist = [
     },
     {
         icon: '',
-        ref: '/dashboard/account',
+        ref: '/dashboard/accounting',
         name: 'Accounting',
     }
 ]
