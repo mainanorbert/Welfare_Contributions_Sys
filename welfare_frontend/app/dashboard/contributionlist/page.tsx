@@ -56,6 +56,7 @@ const allMembers = [
   { no: 18, fullName: "Quinn Taylor", memberNo: "M018", amountRaised: 1100.00 },
   { no: 19, fullName: "Rachel Clark", memberNo: "M019", amountRaised: 2800.25 },
   { no: 20, fullName: "Samuel Robinson", memberNo: "M020", amountRaised: 1900.50 },
+  
 ]
 
 export default function ContributionPage() {
@@ -91,7 +92,7 @@ export default function ContributionPage() {
     doc.text('Contribution List', 14, 15)
     doc.text(`Total Amount Raised: $${totalAmountRaised.toFixed(2)}`, 14, 25)
 
-    const tableColumn = ["No.", "Full Name", "Member No.", "Amount Raised"]
+    const tableColumn = ["No.", "Full Name", "Member No.", "Amount"]
     const tableRows = allMembers.map(member => [
       member.no,
       member.fullName,
@@ -101,8 +102,9 @@ export default function ContributionPage() {
 
     doc.autoTable({
       head: [tableColumn],
+      startY: 30,
       body: tableRows,
-      startY: 35,
+      
     })
 
     doc.save('contribution_list.pdf')
